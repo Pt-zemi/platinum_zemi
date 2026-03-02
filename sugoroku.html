@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>カワサキ☆スゴロク Modern</title>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/sugoroku.css">
+</head>
+<body>
+
+<div id="game-container">
+    <div id="map-layer"></div>
+
+    <div id="ui-layer">
+        <div class="status-bar">
+            <p id="status-text" class="status-text">ゲームを開始します...</p>
+        </div>
+
+        <div id="toast-container"></div>
+
+        <div class="controls-area">
+            <button id="roll-btn" onclick="startDiceRoll()">サイコロを振る</button>
+        </div>
+    </div>
+
+    <div id="dice-overlay">
+        <div class="dice-box">
+            <div id="dice-char">🎲</div>
+        </div>
+    </div>
+</div>
+
+<div id="start-screen">
+    <h1>カワサキ☆スゴロク</h1>
+    <p>プレイ人数を選択してください</p>
+    <div>
+        <button class="player-select-btn" onclick="startGame(2)">2人で遊ぶ</button>
+        <button class="player-select-btn" onclick="startGame(3)">3人で遊ぶ</button>
+        <button class="player-select-btn" onclick="startGame(4)">4人で遊ぶ</button>
+    </div>
+</div>
+
+<div id="quiz-modal" class="modal">
+    <div class="modal-content">
+        <h3 style="margin-top:0; color:var(--accent-color);">カワサキ☆クイズ</h3>
+        <p id="quiz-question" style="font-size:1.1rem; font-weight:bold; margin-bottom:20px;">問題</p>
+        <div id="quiz-options" class="quiz-options"></div>
+    </div>
+</div>
+
+<script src="./script/sugoroku.js"></script>
+
+</body>
+</html>

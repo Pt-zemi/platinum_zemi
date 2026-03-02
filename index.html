@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platinum Zemi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-left">
+                <a href="index.html" class="logo-link">
+                    <img src="images/icon.jpg" alt="Platinum Zemi" class="site-icon-img">
+                </a>
+            </div>
+            <nav class="header-right">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="sugoroku.html" target="_blank">Game</a></li>
+                    <li><a href="map.html" target="_blank">Map</a></li>
+                    <li><a href="https://www.instagram.com/platinum_zemi?igsh=eGx2MDI3aTdpM3Vw&utm_source=qr" target="_blank">SNS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="hero-section">
+            <div class="slider-container">
+                <div class="slider-track">
+                    <div class="slide">
+                        <img src="./images/IMG_1.jpeg" alt="Slide 1">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/IMG_1.jpeg" alt="Slide 2">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/IMG_1.jpeg" alt="Slide 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="content-wrapper">
+            <section class="news-section">
+                <h2 class="section-title">NEWS</h2>
+                <div class="news-container">
+                    <article class="news-item">
+                        <time>2026.02.02</time>
+                        <p>3月に青少年の家で販売を行います。<br>ぜひ来てください。</p>
+                    </article>
+                    <article class="news-item">
+                        <time>2026.02.01</time>
+                        <p>デジタル観光マップ機能を追加しました。</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="map" class="map-section">
+                <h2 class="section-title">DIGITAL TOURIST MAP</h2>
+                <div class="map-wrapper">
+                    <div class="map-container">
+                        <iframe id="map1" class="active" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13000!2d139.7!3d35.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1234567890"></iframe> 
+                        <iframe id="map2" src=""></iframe> 
+                        <iframe id="map3" src=""></iframe> 
+                        <iframe id="map4" src=""></iframe> 
+                        <iframe id="map5" src=""></iframe> 
+                        <div class="navbar">
+                            <button class="nav-button active" onclick="showMap(1)"><span class="material-icons">restaurant</span></button>
+                            <button class="nav-button" onclick="showMap(2)"><span class="material-icons">shopping_cart</span></button>
+                            <button class="nav-button" onclick="showMap(3)"><span class="material-icons">attractions</span></button>
+                            <button class="nav-button" onclick="showMap(4)"><span class="material-icons">castle</span></button>
+                            <button class="nav-button" onclick="showMap(5)"><span class="material-icons">map</span></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2 class="section-title">PROJECT</h2>
+                <div class="project-single-wrapper">
+                    <a href="sugoroku.html" class="project-card featured">
+                        <div class="project-image-container">
+                            <img src="map.jpg" alt="カワサキ☆スゴロク">
+                        </div>
+                        <div class="project-info">
+                            <h3>カワサキ☆スゴロク</h3>
+                            <p>小学生と作った、地域の魅力がつまったスゴロクです。</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Platinum Zemi</p>
+    </footer>
+
+    <script>
+        function showMap(num) {
+            const maps = document.querySelectorAll('.map-container iframe');
+            const btns = document.querySelectorAll('.nav-button');
+            maps.forEach(m => m.classList.remove('active'));
+            btns.forEach(b => b.classList.remove('active'));
+            document.getElementById('map' + num).classList.add('active');
+            btns[num-1].classList.add('active');
+        }
+    </script>
+</body>
+</html>

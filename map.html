@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>白金ゼミ 川崎市デジタル観光マップ</title>
+  <link rel="stylesheet" type="text/css" href="css/digital_map.css"
+
+  <!-- Googleのアイコンフォント -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- 地図本体 -->
+  <div class="map-container">
+    <iframe id="map1" class="active" src="https://www.google.com/maps/d/embed?mid=1qsAgDXmshajiowPfM6A_vzPMRYKizqA&ehbc=2E312F"></iframe> #飲食店
+    <iframe id="map2" src="https://www.google.com/maps/d/embed?mid=1T9ut4SgAcHHrADTx21KgKlHgM11SkCg&ehbc=2E312F"></iframe> #店
+    <iframe id="map3" src="https://www.google.com/maps/d/embed?mid=1m9MltNHwDeqx4WyVtu3awCgWt0QrB34&ehbc=2E312F"></iframe> #遊び
+    <iframe id="map4" src="https://www.google.com/maps/d/embed?mid=1H1JOZ0e51l8trVBnVVCMjGRCrqJI7K0&ehbc=2E312F"></iframe> #観光地
+    <iframe id="map5" src="https://www.google.com/maps/d/embed?mid=1FQTSdd3wE4bNy_NdTd5Gx5fXFmprbBQ&ehbc=2E312F"></iframe> #その他
+
+    <!-- 下ナビバー -->
+    <div class="navbar">
+      <button class="nav-button active" onclick="showMap(1)"><span class="material-icons">restaurant</span></button>
+      <button class="nav-button" onclick="showMap(2)"><span class="material-icons">shopping_cart</span></button>
+      <button class="nav-button" onclick="showMap(3)"><span class="material-icons">attractions</span></button>
+      <button class="nav-button" onclick="showMap(4)"><span class="material-icons">castle</span></button>
+      <button class="nav-button" onclick="showMap(5)"><span class="material-icons">map</span></button>
+
+    </div>
+  </div>
+
+  <script src="./script/digital_map.js"></script>
+
+</body>
+</html>

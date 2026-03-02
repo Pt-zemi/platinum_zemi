@@ -1,0 +1,153 @@
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8f0;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    /* 地図切り替えアニメーション */
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transform: scale(1.2);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    iframe.active {
+      opacity: 1;
+      transform: scale(1);
+      z-index: 1;
+      pointer-events: auto;
+    }
+
+    /* --- 上ナビバー --- */
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background-color: #C6D2F6;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      z-index: 20;
+    }
+
+    .topbar .title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .topbar .social-icon {
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.15s ease;
+      margin-right: 60px;
+    }
+
+    .topbar .social-icon:hover {
+      transform: scale(1.2);
+    }
+
+    .topbar .social-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* --- 下ナビバー --- */
+    .navbar {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(8px);
+      border-radius: 25px;
+      padding: 12px 20px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+      z-index: 10;
+    }
+
+    /* ボタン */
+    .nav-button {
+      border: 3px solid rgba(100, 100, 100, 0.8);
+      border-radius: 14px;
+      background-color: rgba(255, 255, 255, 0.3);
+      color: rgba(100, 100, 100, 0.9);
+      padding: 10px 14px;
+      margin: 0 10px;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      width: 45px;
+      height: 45px;
+    }
+
+    .nav-button:hover {
+      background-color: rgba(255, 255, 255, 0);
+      transform: translateY(-4px);
+    }
+
+    .nav-button.active {
+      background-color: white;
+      color: #839EEC;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+      transform: scale(1.1);
+    }
+
+    .material-icons {
+      font-size: 24px;
+    }
+
+    @media (max-width: 800px) {
+      .navbar {
+        bottom: 15px;
+        padding: 8px 12px;
+      }
+      .nav-button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
+      .material-icons {
+        font-size: 22px;
+      }
+      .topbar {
+        height: 60px;
+        padding: 0 20px;
+      }
+      .topbar .title {
+        font-size: 18px;
+      }
+      .topbar .social-icon {
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+      }
+    }
