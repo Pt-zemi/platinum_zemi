@@ -10,15 +10,15 @@
 <body>
 
 <div id="game-container">
-    <div id="map-layer"></div>
+    <div id="board-area">
+        <div id="map-layer"></div>
+        </div>
 
     <div id="ui-layer">
         <div class="status-bar">
             <p id="status-text" class="status-text">ゲームを開始します...</p>
         </div>
-
         <div id="toast-container"></div>
-
         <div class="controls-area">
             <button id="roll-btn" onclick="startDiceRoll()">サイコロを振る</button>
         </div>
@@ -43,13 +43,12 @@
 
 <div id="quiz-modal" class="modal">
     <div class="modal-content">
-        <h3 style="margin-top:0; color:var(--accent-color);">カワサキ☆クイズ</h3>
+        <h3 style="margin-top:0; color:#e67e22;">カワサキ☆クイズ</h3>
         <p id="quiz-question" style="font-size:1.1rem; font-weight:bold; margin-bottom:20px;">問題</p>
         <div id="quiz-options" class="quiz-options"></div>
     </div>
 </div>
 
 <script src="./script/sugoroku.js"></script>
-
 </body>
 </html>
